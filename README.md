@@ -1,7 +1,7 @@
-Original App Design Project - README
+CodePath iOS Group Project
 ===
 
-# APP_NAME_HERE
+# Union
 
 ## Table of Contents
 1. [Overview](#Overview)
@@ -11,16 +11,16 @@ Original App Design Project - README
 
 ## Overview
 ### Description
-[Description of your app]
+Union is an app that serves as an alternative way of finding people to play with. As awesome as platforms such as Discord and Reddit are for finding communities in the games that we love and play, sometimes these servers and reddit forums can set out to do multiple things at once. If you have ever joined a community on one of these platforms, you will see that often times they are littered with off-topic  channels and are very multi-purpose. This can be a pain-point if your primary intention for joining in the first place is for LFG (Looking for Group). Union serves to eliminate this pain-point by having our platform prioritize the games and the people who play them.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
+
 - **Category:** Social Networking / Gaming
-- **Mobile:** This app would be primarily developed for mobile but would perhaps be just as viable on a computer, such as tinder or other similar apps. Functionality wouldn't be limited to mobile devices, however mobile version could potentially have more features.
-- **Story:** an App that can be a platform for Gamers to find people to play with. You would basically be able to create an account, set up your profile and game preferences, and then be able to find like-minded gamers to play with. It can be either with Practice in mind (like if you’re a competitive player), or with forming a team in mind (like if you have Esports aspirations), or even with casual gamers in mind (like if you want to find someone to play a co-op game with)
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Mobile:** Union will be developed with a "mobile-first" mindset, but absolutely has room for expansion outside of just your mobile devices.
+- **Story:** Union will serve as a platform for Gamers to find people to play and connect with. It can be with practice in mind (if you’re a competitive player), with forming a team in mind (if you have Esports aspirations), or even with casual-play in mind (if you seek someone for a cooperative experience).
+- **Market:** According to eMarketer at InsiderIntelligence, the number of Digital Gamers will reach over 179 million this year in the US alone. Union is marketable to every single one of those people. The reason being is because Union serves as an alternative way of finding Gamers to connect with, regardless of whether you're considered a "hard-core" Gamer or not.
+- **Habit:** Simply put, if you love gaming, you'll love Union. The usage our users get out of our app will be determined by how integral gaming is to their lives. If gaming is something someone does and talks about daily, then they have the potential to open up our app daily as well.
+- **Scope:** Union will serve as an app that's used to connect users based on interests and game preferences. Outside the scope of bringing Gamers together to play, the app has the potential to also serve as a place of information gathering; becoming a resource for current events in the space of video-games (tailored to the users preferences).
 
 ## Product Spec
 
@@ -28,50 +28,89 @@ Original App Design Project - README
 
 **Required Must-have Stories**
 
-* User can register for an account.
-* User logs in to access previous posts or list of people and preference settings
-* User picks their role/chracter/playstyle/etc. ("Reddit/Twitter/Discord in regards to roles" NOT SURE YET!)
-* 
+* User can register a new account
+    * Select Avatar
+    * Create Username
+    * Create Password
+    * Create Bio
+    * Set Game Genre Preferences (First-Person Shooters, Fighting, Role-Playing, etc)
+* User can login to their account
+* View layout of game posters using a CollectionView based off the users preference
+* User can tap a poster in the collection view to see a details screen of that game
+* Display game details
+* User can follow a game which adds it to the users profile
+* User can input their connection purposes after following the game
+* Display all users that follow this game
+* Display each users connection purposes (Looking for Practice, Looking for Co-Op Partner, etc)
+* Able to click on a user to see their user profile
+* View avatar, username, game preferences, following count and bio
+* Display feed of games which the user follows
+* Option to message another user
 
 **Optional Nice-to-have Stories**
 
-* (MAYBE PROFILE PAGES FOR EACH USER WITH GAME INFO...)
-* User sees a chat window with other users.
-
+* User can upload their own profile picture
+* User can send friend requests to other users
+* Allow creation of a display name along with username
+* Profile Settings Tab (update Avatar, Username, Password, Game Genre Preferences and Bio)
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login/Registration:
+    * User can register a new account
+        * Select Avatar image
+        * Create Username and Password
+        * Create a Bio
+        * Set Game Genre Preferences (First-Person Shooters, Fighting, Role-Playing, etc)
+    * User can login to their account
+* Home Screen:
+    * Display a layout of game posters based off the users preferences
+    * User can select a poster to see details of the game
+
+* Game Detail:
+    * Display game details (Title, Description, etc)
+    * User can follow the game which adds it to the users profile
+    * User can input their connection purposes after following the game
+    * Display all users that follow this game, along with their connection purposes (Looking for Practice, Looking for Co-Op Partner, etc)
+    * User can tap one of the other users following the game to view their profile and message them
+    
+    
+* Profile:
+    * Display avatar, username, game preferences, follow count and bio
+    * Display feed of games which the user follows
+    * Option to message another user
+* Direct Messaging
+    *  User can scroll through a list of users they've messaged
+    *  User can open up a previous message thread to continue messaging
+* Profile Settings
+    * User can update the same profile information from account creation (Avatar, Username, Password, Game Genre Preferences, Bio)
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Home
+* User Profile
+* Messaging
+* Profile Settings (Bonus)
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Sign Up => Home
+* Sign In => Home
+* Home => Game Details => User Profile => Messaging Thread
+* Current User Profile => Game Details => ...
+* Messaging Inbox => Messaging Thread => User Profile => ...
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+![](https://i.imgur.com/xmo2VYA.jpg)
+
 
 ### [BONUS] Digital Wireframes & Mockups
+![](https://i.imgur.com/yxr8c8J.png)
 
 ### [BONUS] Interactive Prototype
+<img src='https://github.com/CodePath-Union-App/Union/blob/main/wireframe_demo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 ## Schema 
 [This section will be completed in Unit 9]
@@ -81,3 +120,4 @@ Original App Design Project - README
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
