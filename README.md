@@ -113,11 +113,50 @@ Union is an app that serves as an alternative way of finding people to play with
 <img src='https://github.com/CodePath-Union-App/Union/blob/main/wireframe_demo.gif' title='Video Walkthrough' width='400' alt='Video Walkthrough' />
 
 ## Schema 
-[This section will be completed in Unit 9]
+
 ### Models
-[Add table of models]
+
+#### `Users`
+| Property        | Data Type | Description
+| --------------- | --------- | ----------------------------------------------- |
+| objectId        | Integer   | unique id for each user (default field)         |
+| username        | String    | user's username                                 |
+| password        | String    | user's password                                 |
+| avatar          | File      | user's profile image                            |
+| bio             | String    | user's profile bio                              |
+| gamePreferences | Array     | array listing the game genre's the user prefers |
+| createdAt       | DateTime  | date when user is created (default field)       |
+| updatedAt       | DateTime  | date when user is last updated (default field)  |
+
+#### `Messages`
+| Property  | Data Type       | Description                                       |
+| --------- | --------------- | ------------------------------------------------- |
+| id        | Integer         | unique id for each message (default field)        |
+| author    | Pointer to User | message author                                    |
+| recipient | Pointer to User | message recipient                                 |
+| body      | String          | contents of the message                           |
+| createdAt | DateTime        | date when message is created (default field)      |
+| updatedAt | DateTime        | date when message is last updated (default field) |
+
+
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+### [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### Video Game Database API
+
+* Base URL - https://api.igdb.com/v4
+
+| HTTP Verb   | Endpoint        | Description                                       |
+| ----------- | --------------- | ------------------------------------------------- |
+| `POST`      | /artworks       | official artworks of games                        |
+| `POST`      | /covers         | the cover art of games                            |
+| `POST`      | /games          | video games                                       |
+| `POST`      | /game_videos    | a video associated with a game                    |
+| `POST`      | /genres         | genres of video games                             |
+| `POST`      | /platforms      | hardware used to run the game or delivery network |
+| `POST`      | /release_dates  | to dig deeper into release dates, platforms, etc  |
+
+
 
