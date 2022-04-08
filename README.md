@@ -140,8 +140,72 @@ Union is an app that serves as an alternative way of finding people to play with
 
 
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
+#### List of network requests by screen
+* Home Feed Screen
+    * (Read/GET) Pull a list of games to display from API based on current users game preferences
+        ```swift
+        let url = URL(string: "https://api.igdb.com/v4/genres")!
+        var requestHeader = URLRequest.init(url: url as! URL)
+        requestHeader.httpBody = "fields *; where id=(8,9,11);".data(using: .utf8, allowLossyConversion: false)
+        requestHeader.httpMethod = "POST"
+        requestHeader.setValue("Client ID", forHTTPHeaderField: "Client-ID")
+        requestHeader.setValue("Bearer access_token", forHTTPHeaderField: "Authorization")
+        requestHeader.setValue("application/json", forHTTPHeaderField: "Accept")
+        URLSession.shared.dataTask(with: requestHeader) { data, response, error in }.resume()
+        ```
+* Game Details View
+    * (Read/GET) Pull a game to display from API
+        ```swift
+        let url = URL(string: "https://api.igdb.com/v4/games")!
+        var requestHeader = URLRequest.init(url: url as! URL)
+        requestHeader.httpBody = "fields *; where id=1994".data(using: .utf8, allowLossyConversion: false)
+        requestHeader.httpMethod = "POST"
+        requestHeader.setValue("Client ID", forHTTPHeaderField: "Client-ID")
+        requestHeader.setValue("Bearer access_token", forHTTPHeaderField: "Authorization")
+        requestHeader.setValue("application/json", forHTTPHeaderField: "Accept")
+        URLSession.shared.dataTask(with: requestHeader) { data, response, error in }.resume()
+        ```
+    * (Read/GET) Query all user objects who follow the game you're viewing
+    * (Create/POST) Follow a game whose details page you're viewing
+* User Profile Screen
+    * (Read/GET) Query for the user object of the current user
+        ```swift
+        let currentUser = PFUser.current()
+        ```
+    * (Read/GET) Query for the user object of the user whose profile you're visiting 
+        ```swift
+        let query = PFQuery(className: "Users")
+        query.whereKey("username", equalTo: "JohnDoe")
+        query.getFirstObjectInBackground { (object: PFObject?, error: Error?) in
+            if let error = error {
+                // The query failed
+                print(error.localizedDescription)
+            } else if let object = object {
+                // The query succeeded with a matching result
+                print(object)
+            } else {
+                // The query succeeded but no matching result was found
+            }
+        }
+        ```
+    * (Create/POST) Follow a user whose profile you're visiting
+* Messaging Screen
+    * (Read/GET) Query all messages between current user and recipient
+    * (Create/POST) Create a new message object when in a thread with another user
+* Profile Settings Screen
+    * (Read/GET) Query for the user object of the current user
+        ```swift
+        let currentUser = PFUser.current()
+        ```
+    * (Update/PUT) Update current user profile image 
+    * (Update/PUT) Update current user username
+        ```swift
+        currentUser["username"] = updateUsernameLabel.text
+        currentUser.saveInBackground()
+        ```
+    * (Update/PUT) Update current user password
+    * (Update/PUT) Update current user bio
+    * (Update/PUT) Update current user game preferences
 
 ### [OPTIONAL: List endpoints if using existing API such as Yelp]
 #### Video Game Database API
