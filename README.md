@@ -30,11 +30,11 @@ Union is an app that serves as an alternative way of finding people to play with
 
 * User can register a new account
     * Select Avatar
-    * Create Username
-    * Create Password
+    - [x] Create Username
+    - [x] Create Password
     * Create Bio
     * Set Game Genre Preferences (First-Person Shooters, Fighting, Role-Playing, etc)
-* User can login to their account
+- [x] User can login to their account
 * View layout of game posters using a CollectionView based off the users preference
 * User can tap a poster in the collection view to see a details screen of that game
 * Display game details
@@ -57,12 +57,12 @@ Union is an app that serves as an alternative way of finding people to play with
 ### 2. Screen Archetypes
 
 * Login/Registration:
-    -[x] User can register a new account
+    * User can register a new account
         * Select Avatar image
-        -[x] Create Username and Password
+        * Create Username and Password
         * Create a Bio
         * Set Game Genre Preferences (First-Person Shooters, Fighting, Role-Playing, etc)
-    -[x] User can login to their account
+    * User can login to their account
 * Home Screen:
     * Display a layout of game posters based off the users preferences
     * User can select a poster to see details of the game
