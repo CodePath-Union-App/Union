@@ -28,7 +28,7 @@ Union is an app that serves as an alternative way of finding people to play with
 
 **Required Must-have Stories**
 
-* User can register a new account
+- [x] User can register a new account
     * Select Avatar
     - [x] Create Username
     - [x] Create Password
