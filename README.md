@@ -35,7 +35,7 @@ Union is an app that serves as an alternative way of finding people to play with
     * Create Bio
     - [x] Set Game Genre Preferences (First-Person Shooters, Fighting, Role-Playing, etc)
 - [x] User can login to their account
-- [x] View layout of game posters using a CollectionView based off the users preference
+- [x] View layout of game posters using a CollectionView 
 - [x] User can tap a poster in the collection view to see a details screen of that game
 * Display game details
 * User can follow a game which adds it to the users profile
@@ -221,6 +221,8 @@ Union is an app that serves as an alternative way of finding people to play with
 | `POST`      | /genres         | genres of video games                             |
 | `POST`      | /platforms      | hardware used to run the game or delivery network |
 | `POST`      | /release_dates  | to dig deeper into release dates, platforms, etc  |
+
+### Build Sprint 4: Video Walkthrough
 
 ### Build Sprint 2: Video Walkthrough
 
