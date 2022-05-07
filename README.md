@@ -222,7 +222,8 @@ Union is an app that serves as an alternative way of finding people to play with
 | `POST`      | /platforms      | hardware used to run the game or delivery network |
 | `POST`      | /release_dates  | to dig deeper into release dates, platforms, etc  |
 
-### Build Sprint 4: Video Walkthrough
+### Build Sprint 4: GIF Walkthrough
+![Sprint4](https://user-images.githubusercontent.com/57969388/167235540-fa28a5fa-b524-47aa-9f6a-27dfafa378ca.gif)
 
 ### Build Sprint 2: Video Walkthrough
 
